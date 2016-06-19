@@ -1,4 +1,11 @@
-add_library(scanmatcher eig3.cpp scanmatcher.cpp scanmatcherprocessor.cpp smmap.cpp)
-target_link_libraries(scanmatcher sensor_range utils)
+add_library(scanmatcher
+  eig3.cpp
+  scanmatcher.cpp
+  scanmatcherprocessor.cpp
+  smmap.cpp
+)
 
-install(TARGETS scanmatcher DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
+target_link_libraries(scanmatcher
+  sensor_range
+  utils
+)
